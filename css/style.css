@@ -1,0 +1,102 @@
+/* Navigeerimisriba */
+.nav-bar {
+    list-style: none;
+    display: flex;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar li {
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover */
+.nav-link:hover {
+    background-color: #555;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    flex: 1; /* container võtab ülejäänud kõrguse, et footer jääks all */
+}
+
+.post {
+    flex: 1 1 200px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Telo responsiivsus */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+.site-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* Tagab, et footer jääb sisu alla */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* Vorm */
+#addPostForm {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px; /* ei venita liiga laiaks */
+    margin: 20px auto;
+}
+
+/* Tekstiväljad ja textarea */
+#addPostForm input[type="text"],
+#addPostForm input[type="file"],
+#addPostForm textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: #003e81;  /* sinine */
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
