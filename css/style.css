@@ -23,6 +23,18 @@
     background-color: #555;
 }
 
+.images {
+    height: 40px;
+    width: 40px;
+    border-radius: 0%;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.filler {
+    flex-grow: 1;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
