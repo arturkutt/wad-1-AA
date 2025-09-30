@@ -26,7 +26,6 @@
 .images {
     height: 40px;
     width: 40px;
-    border-radius: 0%;
     cursor: pointer;
     padding: 5px;
 }
@@ -35,26 +34,58 @@
     flex-grow: 1;
 }
 
-.container {
+/* Lehe põhijaotus: külgribad + sisu */
+.page-layout {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    flex: 1; /* container võtab ülejäänud kõrguse, et footer jääks all */
+    flex: 1;
+    min-height: 100%;
+    margin-top: 10px;
 }
 
+.sidebar {
+    flex: 1;                /* külgede ruum */
+    background: #ccc;
+    border-radius: 20px;
+}
+
+.content {
+    flex: 2;                /* keskmine osa suurem */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Postituste kastid */
 .post {
-    flex: 1 1 200px;
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
+    /* border: 1px solid #ccc; */
+    background-color: #eeeeee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
-/* Telo responsiivsus */
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-    }
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 
 /* Footer */
@@ -66,27 +97,24 @@
     margin-top: 20px;
 }
 
-/* Tagab, et footer jääb sisu alla */
+/* Tagab, et footer jääb lehe alla */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-
-
-/* Vorm */
+/* AddPost vorm */
 #addPostForm {
     background-color: #f5f5f5;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 100%;
-    max-width: 400px; /* ei venita liiga laiaks */
+    max-width: 400px;
     margin: 20px auto;
 }
 
-/* Tekstiväljad ja textarea */
 #addPostForm input[type="text"],
 #addPostForm input[type="file"],
 #addPostForm textarea {
@@ -98,7 +126,6 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
-
 
 button {
     background-color: #003e81;  /* sinine */
