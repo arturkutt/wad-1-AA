@@ -5,6 +5,7 @@
     background-color: #333;
     padding: 0;
     margin: 0;
+    border-radius: 5px;
 }
 
 .nav-bar li {
@@ -59,7 +60,7 @@
     /* border: 1px solid #ccc; */
     background-color: #eeeeee;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px;
 }
 
@@ -93,8 +94,9 @@
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 5px 0;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
 /* Tagab, et footer jääb lehe alla */
