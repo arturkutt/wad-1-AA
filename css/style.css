@@ -62,6 +62,7 @@
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 10px;
+
 }
 
 .post-header {
@@ -112,6 +113,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* AddPost vorm */
@@ -149,3 +151,49 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+/* login */
+
+#loginForm {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="file"],
+#loginForm textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container-login {
+    text-align: center;
+}
+
+.button {
+    font-size: 16px;
+}
+
+.text {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: normal;
+    margin-top: 10;
+    margin-bottom: 5;
+}
+
+
+
+
+
