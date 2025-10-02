@@ -97,6 +97,60 @@
     height: 40px;
 }
 
+/* Puuduolevad */
+
+/* Pseudo-element: lisame igale announcement postile ikooni algusesse */
+.announcement::before {
+    content: "📢 ";
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Adjacent sibling selector: ainult esimene p, mis tuleb kohe pärast h2 */
+#announcement-content h2 + p {
+    color: #0fe4c0;
+    font-style: italic;
+}
+
+/* Pseudo-element reminder postile */
+.reminder::before {
+    content: "⏰ ";
+    font-size: 1.2rem;
+}
+
+/* Child selector: ainult vahetud p reminder-content sees */
+#reminder-content > p {
+    border-left: 3px solid #888;
+    padding-left: 5px;
+}
+
+/* General sibling selector: kõik ülejäänud p-d, mis tulevad pärast h2 */
+#reminder-content h2 ~ p {
+    color: #0066cc;
+}
+
+
+/* Pseudo-element Info postile */
+.info::before {
+    content: "ℹ️ ";
+    font-size: 1.2rem;
+}
+
+/* Child selector: ainult vahetud p info-content sees */
+#info-content > p {
+    border-left: 2px dashed #4caf50;
+    padding-left: 5px;
+}
+
+/* Adjacent sibling selector: esimene p pärast h2 */
+#info-content h2 + p {
+    color: #388e3c;
+    font-style: italic;
+}
+
+
+
+
 
 /* Footer */
 .site-footer {
@@ -191,6 +245,18 @@ button:hover {
     font-weight: normal;
     margin-top: 10;
     margin-bottom: 5;
+
+}
+
+
+/* Väikese ekraani jaoks Flexbox mobiilisõbralikuks */
+@media (max-width: 600px) {
+    .page-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        margin-bottom: 10px;
+    }
 }
 
 
