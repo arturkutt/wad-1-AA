@@ -219,9 +219,8 @@ button:hover {
 
 }
 
-#loginForm input[type="text"],
-#loginForm input[type="file"],
-#loginForm textarea {
+
+#loginForm input {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;

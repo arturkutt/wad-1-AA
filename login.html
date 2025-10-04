@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,18 +22,17 @@
         </ul>
     </nav>
 
-    <!-- Add Post form -->
+    <!-- Login form -->
     <div class="container-login">
 
-        <!-- <form id="addPostForm" action="index.html" method="post" enctype="multipart/form-data"> PRG POLE VAJA POSTI TEHA IG-->
         <form id="loginForm" action="index.html">
             <h2>Welcome to PostIt</h2>
             <a class="text" href="">Create an account</a>
             <h2 class="text"> or</h2>
             <h2 class="text"> Please log in</h2>
 
-            <textarea id="Email" name="Email" rows="1" required placeholder="Email"></textarea><br>
-            <textarea id="Password" name="Password" rows="1" required placeholder="Password"></textarea><br>
+            <input id="Email" name="Email" type="email" required placeholder="Email"></input><br>
+            <input id="Password" name="Password" type="password" required placeholder="Password"></input><br>
 
             <button class="button" type="submit" href="index.html">Log in</button><br><br>
 
