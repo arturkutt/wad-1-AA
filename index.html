@@ -1,119 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <!-- Navigation bar -->
-    <nav>
-        <ul class="nav-bar">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="addPost.html" class="nav-link">Add Post</a></li>
-            <li class="filler"></li>
-            <li>
-                <a href="login.html">
-                <img class="images" src="src/images/userAvatar.png">
-                </a>
-            </li>
-        </ul>
-    </nav>
+  <!-- Navigation bar -->
+  <nav>
+    <ul class="nav-bar">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="addPost.html" class="nav-link">Add Post</a></li>
+      <li class="filler"></li>
 
-    <!-- Main content -->
-    <div class="page-layout">
-        <aside class="sidebar left">
-            <!-- Left side, if needed -->
-        </aside>
+      <!-- Avatar + dropdown -->
+      <li class="profile">
+        <button id="avatarBtn" class="avatar-btn" aria-haspopup="true" aria-expanded="false">
+          <img class="images" src="src/images/userAvatar.png" alt="profile"/>
+        </button>
+        <div id="profileMenu" class="dropdown">
+          <div class="menu-item name">John Doe</div>
+          <div class="menu-item email">john.doe@ut.ee</div>
+          <a class="menu-item logout" href="login.html">logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
 
-        <main class="content">
-            <div class="post">
-                <div class="post-header">
-                    <img src="src/images/userAvatar.png" class="avatar" alt="avatar">
-                    <span class="date">Sept 30, 2025</span>
-                </div>
-                <div class="post-content">
-                    <img src="src/images/tartu.jpg" class="post-image" alt="post image">
-                    <p>Tartu 2024</p>
-                </div>
-                <div class="post-footer">
-                    <img src="src/images/thumbs-up.png" class="thumbs-up" alt="Like">
-                </div>
-            </div>
+  <!-- Main content -->
+  <div class="page-layout">
+    <aside class="sidebar left"></aside>
 
-            <div class="post">
-                <div class="post-header">
-                    <img src="src/images/userAvatar.png" class="avatar" alt="avatar">
-                    <span class="date">Sept 20, 2025</span>
-                </div>
-                <div class="post-content">
-                    <p>Anyone knows in which room is the lab today?</p>
-                </div>
-                <div class="post-footer">
-                    <img src="src/images/thumbs-up.png" class="thumbs-up" alt="Like">
-                </div>
-            </div>
+    <main class="content">
+      <div id="feed" class="feed"><!-- JS lisab siia postid --></div>
+    </main>
 
-            <div class="post info">
-                <div class="post-header">
-                    <img src="src/images/userAvatar.png" class="avatar" alt="avatar">
-                    <span class="date">Apr 15, 2025</span>
-                </div>
-                <div class="post-content" id="info-content">
-                    <h2>Info</h2>
-                    <p>Remember to submit your homework on time.</p>
-                    <p>Check all requirements carefully.</p>
-                    <p>Contact your teammates if needed.</p>
-                </div>
-                <div class="post-footer">
-                    <img src="src/images/thumbs-up.png" class="thumbs-up" alt="Like">
-                </div>
-            </div>
+    <aside class="sidebar right"></aside>
+  </div>
 
-            <div class="post reminder">
-                <div class="post-header">
-                    <img src="src/images/userAvatar.png" class="avatar" alt="avatar">
-                    <span class="date">Mar 1, 2024</span>
-                </div>
-                <div class="post-content" id="reminder-content">
-                    <h2>Reminder</h2>
-                    <p>This is the reminder to eat healthy!</p>
-                    <p>For the border i used Child selector btw!</p>
-                    <p>I like to use ~ selector for general.</p>
-                </div>
-                <div class="post-footer">
-                    <img src="src/images/thumbs-up.png" class="thumbs-up" alt="Like">
-                </div>
-            </div>
+  <footer class="site-footer">
+    <p>Wad 2025 AA-1</p>
+  </footer>
 
-
-            <div class="post announcement">
-                <div class="post-header">
-                    <img src="src/images/userAvatar.png" class="avatar" alt="avatar">
-                    <span class="date">Feb 10, 2024</span>
-                </div>
-                <div class="post-content" id="announcement-content">
-                    <h2>Announcement</h2>
-                    <p>You must train everyday.</p>
-                    <p>Live a fulfilled life.</p>
-                </div>
-                <div class="post-footer">
-                    <img src="src/images/thumbs-up.png" class="thumbs-up" alt="Like">
-                </div>
-            </div>
-
-            
-        </main>
-
-        <aside class="sidebar right">
-            <!-- Right side, if needed -->
-        </aside>
-    </div>
-
-    <footer class="site-footer">
-        <p>Wad 2025 AA-1</p>
-    </footer>
-
+  <script src="js/app.js"></script>
 </body>
 </html>
