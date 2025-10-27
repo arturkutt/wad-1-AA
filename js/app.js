@@ -1,5 +1,5 @@
- const ENDPOINT = "https://my-json-server.typicode.com/arturkutt/json-api/posts"; // <- väljast 
-//const ENDPOINT = "data/posts.json";
+//const ENDPOINT = "https://my-json-server.typicode.com/arturkutt/json-api/posts"; // <- väljast  for MyJSONServer
+const ENDPOINT = "data/posts.json"; // <- lokaalne JSON fail(for local json)
 
 // Dropdown (avatar) avamine-sulgemine
 const profile = document.querySelector(".profile");
@@ -73,8 +73,8 @@ async function load() {
     const data = await res.json();
     // puhasta ja lisa
     feed.innerHTML = "";
-    //data.posts.forEach(p => feed.appendChild(renderPost(p)));
-    data.forEach(p => feed.appendChild(renderPost(p))); // MyJSONServer -> data on juba array
+    data.posts.forEach(p => feed.appendChild(renderPost(p))); // see käib lokaalse JSON faili jaoks
+    //data.forEach(p => feed.appendChild(renderPost(p))); // MyJSONServer -> data on juba array -- see käib MyJSONServer jaoks
   } catch (e) {
     console.error("Postide laadimine ebaõnnestus:", e);
     feed.innerHTML = "<p>Could not load posts. Check endpoint or CORS.</p>";
