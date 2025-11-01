@@ -35,10 +35,13 @@ body { /* Ensures that footer stays at the bottom of the page */
     padding: 15px 20px;
     border-radius: 6px;
     transition: 0.3s ease;
+    display: inline-block; /* vajalik, et transform töötaks korrektselt */
+
 }
 
 .nav-link:hover {
     background-color: #334155;
+    font-size: 1.1rem; /* suurendab teksti ja elementi 20% võrra */
 }
 
 .images {
@@ -259,7 +262,15 @@ button:hover {
 
 /* Avatar dropdown */
 .profile { position: relative; }
-.avatar-btn { background: transparent; border: 0; padding: 0; }
+.avatar-btn { 
+    background: transparent; 
+    border: 0; 
+    padding: 0; 
+}
+
+.avatar-btn:hover {
+    background-color:#334155 ;
+}
 .dropdown {
   position: absolute;
   right: 0;
@@ -294,10 +305,23 @@ button:hover {
     text-align: center;
     padding: 15px;
     margin-top: auto;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     border-radius: 10px;
 }
 
+.site-footer .team {
+  font-size: 14px;
+  color: #bac4cf; /* veidi heledam hall toon */
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+.site-footer .team span {
+  transition: color 0.3s ease;
+}
+
+.site-footer .team span:hover {
+  color: #38bdf8; /* hele sinakas toon */
+}
 
 
 /* ======= Responsive ======= */
